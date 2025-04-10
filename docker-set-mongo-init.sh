@@ -11,6 +11,6 @@ mongo_pass=$(echo ${pass_arr[1]} | tr -d '"')
 mongo_db=$(cat .env | grep 'MONGO_DB_NAME')
 IFS='=' read -a db_arr <<< $mongo_db
 mongo_db=$(echo ${db_arr[1]} | tr -d '"')
-sed -i "s;USER_REF;$mongo_user;g" init-mongo.js
-sed -i "s;PASS_REF;$mongo_pass;g" init-mongo.js
-sed -i "s;DB_REF;$mongo_db;g" init-mongo.js
+sed -i '' "s;USER_REF;$mongo_user;g" init-mongo.js
+sed -i '' "s;PASS_REF;$mongo_pass;g" init-mongo.js
+sed -i '' "s;DB_REF;$mongo_db;g" init-mongo.js
